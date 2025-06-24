@@ -1,0 +1,54 @@
+/* src/components/applicant/PublicJobCard.css */
+
+.job-card {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.job-title {
+  font-size: 1.5rem;
+  color: #1a0dab; /* Google's link blue */
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.card-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  color: #5f6368;
+  margin-bottom: 24px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+}
+
+.detail-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+
+.learn-more-btn {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #f8f9fa;
+}

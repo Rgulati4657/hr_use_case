@@ -1,0 +1,36 @@
+/* src/components/shared/Accordion.css */
+.accordion-group {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.accordion-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #73797e;
+}
+
+.accordion-icon {
+  transition: transform 0.2s ease-in-out;
+  font-size: 0.8rem;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding-top: 16px;
+}

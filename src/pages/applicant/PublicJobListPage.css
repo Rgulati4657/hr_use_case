@@ -1,0 +1,17 @@
+/* src/pages/applicant/PublicJobListPage.css */
+
+.job-search-page {
+  display: grid;
+  /* This creates two columns: the first is 300px wide, the second takes the rest of the space (1fr) */
+  grid-template-columns: 300px 1fr;
+  gap: 32px; /* Space between the sidebar and the job list */
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto; /* Center the layout on wider screens */
+}
+
+.job-list-container h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}

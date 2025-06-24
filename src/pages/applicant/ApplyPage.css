@@ -1,0 +1,26 @@
+/* src/pages/applicant/ApplyPage.css */
+.apply-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.success-message {
+  text-align: center;
+  padding: 40px;
+  background-color: #e6f4ea;
+  border: 1px solid #b7e1c7;
+  border-radius: 8px;
+}
+
+.success-message h2 {
+  color: #0d652d;
+}
+
+.back-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 16px;
+}
