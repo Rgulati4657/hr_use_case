@@ -234,13 +234,17 @@ import axios from 'axios';
 // --- Client 1: JD Server (No Change) ---
 // This client handles everything related to Job Descriptions.
 // =======================================================================
+// const apiClient = axios.create({
+//   // Using '/' assumes the JD server is on the same domain as the frontend.
+//   // Change to 'http://192.168.1.9:8085' if needed.
+//   baseURL: '/',
+//   headers: { 'Content-Type': 'application/json' },
+// });
+// ✅ Correctly points to the deployed backend
 const apiClient = axios.create({
-  // Using '/' assumes the JD server is on the same domain as the frontend.
-  // Change to 'http://192.168.1.9:8085' if needed.
-  baseURL: '/',
+ baseURL: import.meta.env.VITE_JD_API_URL, // The URL from your proxy target
   headers: { 'Content-Type': 'application/json' },
 });
-
 // --- JD Server API Functions ---
 
 export const getAllJobs = async () => {
@@ -312,16 +316,15 @@ export const updateJobById = async (jobId, jobData) => {
 // --- Client 2: Main ATS Server (Port 8080) ---
 // This handles creating applicants, applications, and getting the list of applications for a job.
 const atsApiClient = axios.create({
-  // baseURL: 'http://192.168.1.7:8080',
-  baseURL: 'https://appats-559132211786.europe-west1.run.app',
+  baseURL:import.meta.env.VITE_ATS_MAIN_API_URL ,
   headers: { 'Content-Type': 'application/json' },
 });
 
 // --- Client 3: ATS Management Server (Port 8082) ---
 // This handles the new endpoint for getting detailed applicant profiles.
 const atsManagementApiClient = axios.create({
-  // baseURL: 'http://192.168.1.7:8082',
-  baseURL: 'https://applicantcrud-559132211786.europe-west1.run.app',
+
+  baseURL:  import.meta.env.VITE_ATS_MANAGE_API_URL,
   headers: { 'Content-Type': 'application/json' },
 });
 
