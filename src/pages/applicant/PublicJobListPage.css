@@ -1,17 +1,30 @@
 /* src/pages/applicant/PublicJobListPage.css */
 
 .job-search-page {
-  display: grid;
-  /* This creates two columns: the first is 300px wide, the second takes the rest of the space (1fr) */
-  grid-template-columns: 300px 1fr;
-  gap: 32px; /* Space between the sidebar and the job list */
-  padding: 24px;
-  max-width: 1400px;
-  margin: 0 auto; /* Center the layout on wider screens */
+    display: flex;
+    flex-direction: row;
+    gap: 24px; /* Space between sidebar and job list */
 }
 
-.job-list-container h2 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 24px;
+.filter-sidebar-container {
+    flex: 0 0 280px; /* Sidebar has a fixed width of 280px */
+}
+
+.job-list-container {
+    flex: 1; /* Job list takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between job cards */
+}
+
+/* --- Responsive styles for mobile phones --- */
+@media (max-width: 768px) {
+    .job-search-page {
+        flex-direction: column; /* Stack sidebar on top of job list */
+    }
+
+    .filter-sidebar-container {
+        flex-basis: auto; /* Allow sidebar to take its natural height */
+        width: 100%;
+    }
 }
